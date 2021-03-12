@@ -18,6 +18,15 @@
                 :text="__('Dashboard')" />
         </li>
 
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.person.index')"
+                :active="activeClass(Route::is('admin.person.index'), 'c-active')"
+                icon="c-sidebar-nav-icon cil-speedometer"
+                :text="__('Person')" />
+        </li>
+
         @if (
             $logged_in_user->hasAllAccess() ||
             (
